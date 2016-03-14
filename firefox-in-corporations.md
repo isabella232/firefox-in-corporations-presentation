@@ -17,6 +17,7 @@ theme
 :   clear-code
 
 
+{::comment}
 
 
 # 株式会社クリアコード
@@ -48,6 +49,7 @@ Mozillaサポート
 
 ![](images/company-mozilla-support.png){:relative_height="100"}
 
+{:/comment}
 
 
 # Mozilla Firefoxとは？
