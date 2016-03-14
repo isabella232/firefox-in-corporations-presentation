@@ -139,20 +139,31 @@ http://www.mozilla.jp/business/downloads/
 # リリースサイクル
 
 通常版
-:   * サポート期間は1.5ヶ月
+:   * サポート期間は6〜8週間
 
 長期サポート版（*ESR版*）
 :   * 主に企業利用を想定
     * サポート期間は約1年、
-      1.5ヶ月ごとにセキュリティアップデート
+      通常リリースと同期して
+      セキュリティアップデート
 
-# 導入事例
+# どこで使われている？
 
  * 生命保険・損害保険
  * 電力会社
  * 中央官庁
 
 その他、様々な企業で利用実績あり
+
+# なぜ使われる？
+
+ * 現在利用中のシステムを
+   維持したままで
+ * 自由に導入・削除ができて
+ * 最新のWeb技術に対応している
+
+**「ちょうどいい」選択肢**
+として重宝されている
 
 # 代表的な導入の動機
 
@@ -173,7 +184,7 @@ http://www.mozilla.jp/business/downloads/
      * IEは社内ネットワーク用に限定
      * インターネットはFirefoxで利用
 
-# 導入までの流れ
+# 導入までの流れ（例）
 
  * 仕様検討
    * 運用中のIEと同様の管理について相談
@@ -182,6 +193,7 @@ http://www.mozilla.jp/business/downloads/
    * おすすめ設定の提示
  * α版、β版提供
  * 正式版提供、全社展開
+
 
 # 保守/メンテナンスでの関わり
 
@@ -192,6 +204,9 @@ http://www.mozilla.jp/business/downloads/
    * 問題を暫定的に回避するアドオンの提供
    * 場合によってはMozilla Japanと連携
 
+{::comment}
+このスライドは外す？
+{:/comment}
 
 
 
@@ -405,8 +420,7 @@ Firefoxの実行ファイルと同じ
 ![](images/screenshot-tech-faq.png){:relative_width="35" align="right" relative_margin_right="-10"}
 
 [mozilla.jp/business/faq/tech/](http://mozilla.jp/business/faq/tech/)
-([github.com/mozilla-
-japan/enterprise](https://github.com/mozilla-japan/enterprise/))
+([github.com/mozilla-japan/enterprise](https://github.com/mozilla-japan/enterprise/))
 
  * ○○を無効化したい
  * ○○を使いたい
@@ -420,3 +434,7 @@ japan/enterprise](https://github.com/mozilla-japan/enterprise/))
     * Mozilla Japanサポートパートナー
     * Firefox/Thunderbird
       インシデントサポート
+
+{::comment}
+このスライドは外す？
+{:/comment}
