@@ -17,12 +17,11 @@ theme
 :   clear-code
 
 
-{::comment}
-
-
 # 株式会社クリアコード
 
 ![](images/ClearCodeCI-with-letter.png){:relative_height="100"}
+
+{::comment}
 
 # 株式会社クリアコード
 
@@ -43,13 +42,14 @@ theme
 ![](images/company-categories2.png){:relative_height="100"}
 
 
+{:/comment}
+
 # 株式会社クリアコード
 
 Mozillaサポート
 
 ![](images/company-mozilla-support.png){:relative_height="100"}
 
-{:/comment}
 
 
 # Mozilla Firefoxとは？
