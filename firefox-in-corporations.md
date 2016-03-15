@@ -171,7 +171,7 @@ http://www.mozilla.jp/business/downloads/
 :   SaaSを利用したい
     （サービスがモダンなWebブラウザを要求）
 
-     * *Office 365*
+     * Office 365
      * Google Apps
      * Salesforce
 
