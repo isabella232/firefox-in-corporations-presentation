@@ -195,18 +195,35 @@ http://www.mozilla.jp/business/downloads/
  * 正式版提供、全社展開
 
 
-# 保守/メンテナンスでの関わり
+# 保守/メンテナンス
+
+クリアコードのインシデントサポートで
+よくご相談いただく事
 
  * バージョンアップへの対応
  * トラブル発生時の対応
-   * ソースコードの調査まで含めた
-     原因究明と回避策の提案
-   * 問題を暫定的に回避するアドオンの提供
-   * 場合によってはMozilla Japanと連携
 
-{::comment}
-このスライドは外す？
-{:/comment}
+# バージョンアップへの対応
+
+ * 旧バージョンで使用していた
+   設定の新バージョンでの検証
+ * 新バージョンで使えなくなった
+   機能・設定の代替方法の調査
+ * 更新が停止した既存アドオンを
+   新バージョン向けに改修
+
+# トラブル発生時の対応
+
+ * ソースコードの調査まで含めた
+   原因究明と回避策の提案
+ * 問題を暫定的に回避する
+   アドオンの提供
+ * 場合によってはMozilla Japanに
+   エスカレーション
+
+
+
+
 
 
 
@@ -236,7 +253,7 @@ http://www.mozilla.jp/business/downloads/
 ![](images/screenshot-menu-blur.png){:relative_height="100"}
 
 
-# 例：機能の制御
+# 例：使わない機能の無効化
 
  * 自動アップデートを禁止したい
  * アドオンを利用させたくない
@@ -245,15 +262,31 @@ http://www.mozilla.jp/business/downloads/
 :   * Disable Auto-update
     * Disable Addons
 
+# 例：アドオンの強制使用
+
+ * 自社開発のアドオンを使いたい
+ * 古いアドオンを使いたい
+
+→*MCD*を使用
+
+~~~
+lockPref("xpinstall.signatures.required", false);
+lockPref("extensions.checkCompatibility.45.0", false);
+~~~
+{: lang="javascript"}
+
 # 例：プライバシー情報の制御
 
  * パスワードを保存させたくない
  * 位置情報を提供させたくない
 
 →*MCD*を使用
-:   * `lockPref("signon.rememberSignons",
-                false);`
-    * `lockPref("geo.enabled", false);`
+
+~~~
+lockPref("signon.rememberSignons", false);
+lockPref("geo.enabled", false);
+~~~
+{: lang="javascript"}
 
 # 例：通信量の削減
 
@@ -261,8 +294,12 @@ http://www.mozilla.jp/business/downloads/
    不要な通信をすべて禁止したい
 
 →*MCD*を使用
-:   * `lockPref("geo.wifi.uri", "");`
-    * `lockPref("loop.enabled", false);`
+
+~~~
+lockPref("geo.wifi.uri", "");
+lockPref("loop.enabled", false);
+~~~
+{: lang="javascript"}
 
 # 例：プラグインの制御
 
@@ -288,44 +325,11 @@ http://www.mozilla.jp/business/downloads/
    組織全体で設定を一括管理したい
 
 →*MCD*を使用
-:   * `lockPref("設定キー", "値");`
-
-{::comment}
-
-# 設定の集中管理
-
-*Mission Control Desktop*（*MCD*）
-:   * Netscape Mission Control Desktop
-      に由来
-    * 設定ファイルで*設定をロック*
-    * *リモート設定ファイル*で集中管理
-
-# 設定の集中管理の例
 
 ~~~
-lockPref("browser.startup.homepage", "http://...");
-
-lockPref("media.eme.enabled",false);
-lockPref("media.gmp-gmpopenh264.enabled",false);
-lockPref("media.gmp-eme-adobe.enabled",false);
-lockPref("media.gmp-provider.enabled",false);
-
-lockPref("browser.formfill.enable", false);
-lockPref("signon.rememberSignons", false);
-
-if (typeof getPref("toolkit.telemetry.prompted") == "boolean")
-  clearPref("toolkit.telemetry.prompted");
-lockPref("toolkit.telemetry.prompted", 2);
-lockPref("toolkit.telemetry.rejected", true);
-lockPref("toolkit.telemetry.enabled", false);
-lockPref("toolkit.telemetry.infoURL", ");
-lockPref("toolkit.telemetry.server", ");
+lockPref("設定キー", "値");
 ~~~
 {: lang="javascript"}
-
-
-{:/comment}
-
 
 # 管理者による設定の強制
 
@@ -339,6 +343,7 @@ Firefoxの実行ファイルと同じ
 ![](images/figure-remote-mcd.png){:relative_height="75"}
 
 サーバー上にある設定ファイルを参照
+
 
 
 # 例：インスタンスの使い分け
@@ -412,7 +417,7 @@ Firefoxの実行ファイルと同じ
 実際の導入事例の
 頻出設定パターン集
 
-→*ご希望の方に随時ご提供します*
+→*ご希望の方に随時ご提供中*
 
 
 # 法人向けFAQ
@@ -427,7 +432,7 @@ Firefoxの実行ファイルと同じ
 
 *公開中*
 
-# サポートサービスのご案内
+# サポートサービス
 
 株式会社クリアコード
 :   * [www.clear-code.com](http://www.clear-code.com)
