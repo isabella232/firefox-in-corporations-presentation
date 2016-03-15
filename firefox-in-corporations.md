@@ -226,6 +226,11 @@ http://www.mozilla.jp/business/downloads/
 
 
 
+# 導入・カスタマイズのイメージ
+
+デモ
+
+
 
 
 # 法人利用で便利な特性
