@@ -421,7 +421,19 @@ Firefoxの実行ファイルと同じ
 実際の導入事例の
 頻出設定パターン集
 
-→*ご希望の方に随時ご提供中*
+→*[github.com/clear-code/firefox-support-common](https://https://github.com/clear-code/firefox-support-common/)*
+
+
+# メタインストーラ例
+
+冒頭のデモに使用した
+Firefox 45のカスタマイズ例
+
+→*[github.com/clear-code/firefox-support-common](https://https://github.com/clear-code/firefox-support-common/)*
+
+ビルド済みファイルは
+*ご希望の方に随時ご提供中*
+
 
 
 # 法人向けFAQ
