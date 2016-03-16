@@ -432,7 +432,7 @@ Firefox 45のカスタマイズ例
 →*[github.com/clear-code/firefox-support-common](https://https://github.com/clear-code/firefox-support-common/)*
 
 ビルド済みファイルは
-*ご希望の方に随時ご提供中*
+[Releasesからダウンロード可能](https://github.com/clear-code/firefox-support-common/releases/tag/v45.0)
 
 
 
