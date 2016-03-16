@@ -5,9 +5,6 @@ subtitle
     ～ カスタマイズから集中管理まで ～
 
 author
-:   結城洋志
-
-institution
 :   株式会社クリアコード
 
 allotted_time
