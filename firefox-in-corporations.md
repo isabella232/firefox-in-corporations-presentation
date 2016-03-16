@@ -195,10 +195,9 @@ http://www.mozilla.jp/business/downloads/
  * 正式版提供、全社展開
 
 
-# 保守/メンテナンス
+# 保守・メンテナンス
 
-クリアコードのインシデントサポートで
-よくご相談いただく事
+導入後に実際に必要になる事
 
  * バージョンアップへの対応
  * トラブル発生時の対応
@@ -209,27 +208,27 @@ http://www.mozilla.jp/business/downloads/
    設定の新バージョンでの検証
  * 新バージョンで使えなくなった
    機能・設定の代替方法の調査
- * 更新が停止した既存アドオンを
-   新バージョン向けに改修
+ * 更新が停止した既存アドオンの
+   取り扱いの判断
 
-# トラブル発生時の対応
+# 参考となる公開情報
+
+ * [リリースノート](https://www.mozilla.jp/firefox/releases/)
+ * [Firefox サイト互換性情報](https://www.fxsitecompat.com/ja/)
+ * [開発者向けリリースノート](https://developer.mozilla.org/ja/Firefox/Releases)
+ * [Mozilla Japanブログ](https://www.mozilla.jp/blog/)
+ * [Firefox自体のソースコード](http://mxr.mozilla.org/)
+
+# インシデントサポート事例
 
  * ソースコードの調査まで含めた
    原因究明と回避策の提案
- * 問題を暫定的に回避する
-   アドオンの提供
- * 場合によってはMozilla Japanに
-   エスカレーション
-
-
-
-
-
-
-# 導入・カスタマイズのイメージ
-
-デモ
-
+   * 問題を暫定的に回避する
+     アドオンの提供
+   * 場合によってはMozilla Japanに
+     エスカレーション
+ * 更新が停止した既存アドオンを
+   新バージョン向けに改修
 
 
 
