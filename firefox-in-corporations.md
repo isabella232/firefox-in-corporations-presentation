@@ -388,6 +388,16 @@ Firefoxの実行ファイルと同じ
     * Reload on Idle
 
 
+# 自社開発アドオンの導入時
+
+ * 非公開のアドオンとして
+   Mozilla Add-onsに登録
+ * 設定で署名の検証を無効化
+   
+   ~~~
+   lockPref("xpinstall.signatures.required", false);
+   ~~~
+
 # 例：一斉展開
 
  * カスタマイズ済みのFirefoxを
