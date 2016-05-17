@@ -49,77 +49,11 @@ Mozillaサポート
 
 
 
-# Mozilla Firefoxとは？
+# 基礎知識
 
-![](images/screenshot-netscape-to-firefox.png){:relative_height="100"}
-
-{::comment}
-Firefoxのスクリーンショットは
-http://www.mozilla.jp/press/#sec-kits
-より引用
-{:/comment}
-
-
-# Mozilla Firefoxとは？
-
-![](images/screenshot-netscape.png){:relative_width="40" align="right" relative_margin_right="-10"}
-
-Netscape Communicator 5.0
-のソースコード（1998年公開）
-に由来
-
- * 一部のコードや
-   データ形式は
-   引き継がれている
- * オープンソースという言葉の発祥
-
-{::comment}
-画像は
-https://commons.wikimedia.org/wiki/File:Netscape_Communicator_4.8_Screenshot.png
-より引用
-{:/comment}
-
-# Mozilla Firefoxとは？
-
-![](images/screenshot-phoenix.png){:relative_width="35" align="right" relative_margin_right="-10"}
-
- * Netscapeから独立し
-   「Mozilla」ブランドを確立
- * Webブラウザ単体の
-   製品として再設計
-   * Eメールクライアント
-     →Thunderbird
-   * 統合アプリケーション
-     →Seamonkey
-
-{::comment}
-画像は
-https://commons.wikimedia.org/wiki/File:Phoenix_0.1.png
-より引用
-{:/comment}
-
-# オープンな開発体制
-
-![](images/screenshot-bugzilla.png){:relative_width="42" align="right" relative_margin_right="-10"}
-
- * Mozilla雇用の
-   フルタイム開発者
- * 一般の開発者
-   * ボランティア
-   * 企業の被雇用者
-
-# オープンな開発体制
-
-![](images/screenshot-mozilla-mission.png){:relative_width="32" align="right" relative_margin_right="-10"}
-
- * スローガンは
-   [「インターネット上の
-   オープン性と革新、
-   機会を促進すること」 ](https://www.mozilla.org/ja/mission/)
-   * 増収増益は*目的*でない
-   * 「目的達成のためには
-     一定のシェアが必要」
-     という立場から普及を促進
+ * Firefoxのリリースサイクル
+ * 法人利用における
+   Firefox採用の利点
 
 # リリースサイクル
 
