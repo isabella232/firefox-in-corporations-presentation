@@ -14,6 +14,17 @@ theme
 :   clear-code
 
 
+
+# 目次
+
+ * クリアコードのご紹介
+ * Firefoxの法人利用の概要
+ * よくあるご相談
+   * 一斉展開
+   * 集中管理
+ * まとめ
+
+
 # 株式会社クリアコード
 
 ![](images/ClearCodeCI-with-letter.png){:relative_height="100"}
@@ -47,6 +58,9 @@ Mozillaサポート
 
 ![](images/company-mozilla-support.png){:relative_height="100"}
 
+
+
+# 法人利用における基礎知識
 
 
 # 基礎知識
@@ -124,51 +138,70 @@ http://www.mozilla.jp/business/downloads/
    * おすすめ設定の提示
  * α版、β版提供
  * 正式版提供、全社展開
+ 
+ 
+ 
+# よくあるご相談
+
+# 法人利用でよくあるご相談
+
+ * 一斉展開
+ * 設定の集中管理
+ * 導入後の保守
 
 
-# カスタマイズの実例
+# 一斉展開
 
-デモ
+ * カスタマイズ済みのFirefoxを
+   一斉展開したい
+
+→*メタインストーラ*を使用
+:   * Firefox本体をサイレントインストール
+    * カスタマイズを反映
+    * 詳細は[www.clear-code.com/blog/2012/11/7](http://www.clear-code.com/blog/2012/11/7.html)を参照
 
 
-# 保守・メンテナンス
+# メタインストーラの動作
 
-導入後に実際に必要になる事
+![](images/figure-meta-installer.png){:relative_height="75"}
 
- * バージョンアップへの対応
- * トラブル発生時の対応
-
-# バージョンアップへの対応
-
- * 旧バージョンで使用していた
-   設定の新バージョンでの検証
- * 新バージョンで使えなくなった
-   機能・設定の代替方法の調査
- * 更新が停止した既存アドオンの
-   取り扱いの判断
-
-# 参考となる公開情報
-
- * [リリースノート](https://www.mozilla.jp/firefox/releases/)
- * [Firefox サイト互換性情報](https://www.fxsitecompat.com/ja/)
- * [開発者向けリリースノート](https://developer.mozilla.org/ja/Firefox/Releases)
- * [Mozilla Japanブログ](https://www.mozilla.jp/blog/)
- * [Firefox自体のソースコード](http://mxr.mozilla.org/)
-
-# インシデントサポート事例
-
- * ソースコードの調査まで含めた
-   原因究明と回避策の提案
-   * 問題を暫定的に回避する
-     アドオンの提供
-   * 場合によってはMozilla Japanに
-     エスカレーション
- * 更新が停止した既存アドオンを
-   新バージョン向けに改修
+カスタマイズを自動的に反映
 
 
 
-# 法人利用で便利な特性
+
+# 設定の集中管理
+
+ * 設定を変更させたくない
+ * グループポリシーのように
+   組織全体で設定を一括管理したい
+
+→*MCD*を使用
+
+~~~
+lockPref("設定キー", "値");
+~~~
+{: lang="javascript"}
+
+# 管理者による設定の強制
+
+![](images/figure-local-mcd.png){:relative_height="60"}
+
+Firefoxの実行ファイルと同じ
+フォルダにある設定ファイルを参照
+
+# グループポリシーのような運用
+
+![](images/figure-remote-mcd.png){:relative_height="75"}
+
+サーバー上にある設定ファイルを参照
+
+
+
+
+
+
+# カスタマイズの例
 
 ![](images/screenshot-menu-blur.png){:relative_height="100"}
 
@@ -188,9 +221,20 @@ http://www.mozilla.jp/business/downloads/
 :   * 実際にやっている・やっていた事は
       イメージしやすい
 
-# 頻出カスタマイズ例
+# カスタマイズメニュー
 
-![](images/screenshot-menu-blur.png){:relative_height="100"}
+![](images/screenshot-menu.png){:relative_width="45" align="right" relative_margin_right="-10"}
+
+各種カスタマイズ項目の*メニュー*
+
+ * 何ができる？
+ * どんな選択肢
+   がある？
+
+実際の導入事例の
+頻出設定パターン集
+
+→*[github.com/clear-code/firefox-support-common](https://https://github.com/clear-code/firefox-support-common/)*
 
 
 # 例：使わない機能の無効化
@@ -258,35 +302,9 @@ lockPref("loop.enabled", false);
 :   * globalChrome.css
     * UI Text Overrider
 
-# 例：設定の集中管理
-
- * 設定を変更させたくない
- * グループポリシーのように
-   組織全体で設定を一括管理したい
-
-→*MCD*を使用
-
-~~~
-lockPref("設定キー", "値");
-~~~
-{: lang="javascript"}
-
-# 管理者による設定の強制
-
-![](images/figure-local-mcd.png){:relative_height="60"}
-
-Firefoxの実行ファイルと同じ
-フォルダにある設定ファイルを参照
-
-# グループポリシーのような運用
-
-![](images/figure-remote-mcd.png){:relative_height="75"}
-
-サーバー上にある設定ファイルを参照
 
 
-
-# 例：インスタンスの使い分け
+# 例：複数バージョン共存
 
  * 「組織内システム用」と
    「通常用」を使い分けたい
@@ -322,32 +340,46 @@ Firefoxの実行ファイルと同じ
     * Reload on Idle
 
 
-# 自社開発アドオンの導入時
 
- * 非公開のアドオンとして
-   Mozilla Add-onsに登録
- * 設定で署名の検証を無効化
-   
-   ~~~
-   lockPref("xpinstall.signatures.required", false);
-   ~~~
-
-# 例：一斉展開
-
- * カスタマイズ済みのFirefoxを
-   一斉展開したい
-
-→*メタインストーラ*を使用
-:   * Firefox本体をサイレントインストール
-    * カスタマイズを反映
-    * 詳細は[www.clear-code.com/blog/2012/11/7](http://www.clear-code.com/blog/2012/11/7.html)を参照
+# 導入後の保守
 
 
-# メタインストーラの動作
+# 保守・メンテナンス
 
-![](images/figure-meta-installer.png){:relative_height="75"}
+導入後に実際に必要になる事
 
-カスタマイズを自動的に反映
+ * バージョンアップへの対応
+ * トラブル発生時の対応
+
+# バージョンアップへの対応
+
+ * 旧バージョンで使用していた
+   設定の新バージョンでの検証
+ * 新バージョンで使えなくなった
+   機能・設定の代替方法の調査
+ * 更新が停止した既存アドオンの
+   取り扱いの判断
+
+# 参考となる公開情報
+
+ * [リリースノート](https://www.mozilla.jp/firefox/releases/)
+ * [Firefox サイト互換性情報](https://www.fxsitecompat.com/ja/)
+ * [開発者向けリリースノート](https://developer.mozilla.org/ja/Firefox/Releases)
+ * [Mozilla Japanブログ](https://www.mozilla.jp/blog/)
+ * [Firefox自体のソースコード](http://mxr.mozilla.org/)
+
+# インシデントサポート事例
+
+ * ソースコードの調査まで含めた
+   原因究明と回避策の提案
+   * 問題を暫定的に回避する
+     アドオンの提供
+   * 場合によってはMozilla Japanに
+     エスカレーション
+ * 更新が停止した既存アドオンを
+   新バージョン向けに改修
+
+
 
 
 # まずはここから
@@ -356,31 +388,20 @@ Firefoxの実行ファイルと同じ
 
 # カスタマイズメニュー
 
-![](images/screenshot-menu.png){:relative_width="45" align="right" relative_margin_right="-10"}
+*[github.com/clear-code/firefox-support-common](https://https://github.com/clear-code/firefox-support-common/)*
 
-各種カスタマイズ項目の*メニュー*
-
- * 何ができる？
- * どんな選択肢
-   がある？
-
-実際の導入事例の
-頻出設定パターン集
-
-→*[github.com/clear-code/firefox-support-common](https://https://github.com/clear-code/firefox-support-common/)*
-
+ * Open Document Format
+ * 検証手順書付き
+ * 自社でカスタマイズされる場合の参考として
 
 # メタインストーラ例
 
-冒頭のデモに使用した
-Firefox 45のカスタマイズ例
+*[github.com/clear-code/firefox-support-common](https://https://github.com/clear-code/firefox-support-common/)*
 
-→*[github.com/clear-code/firefox-support-common](https://https://github.com/clear-code/firefox-support-common/)*
-
-ビルド済みファイルは
-[Releasesからダウンロード可能](https://github.com/clear-code/firefox-support-common/releases/tag/v45.0)
-
-
+ * 冒頭のデモに使用した
+   Firefox 45のカスタマイズ例
+ * ビルド済みファイルは
+   [Releasesからダウンロード可能](https://github.com/clear-code/firefox-support-common/releases/tag/v45.0)
 
 # 法人向けFAQ
 
