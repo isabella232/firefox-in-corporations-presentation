@@ -11,7 +11,7 @@ allotted_time
 :   50m
 
 theme
-:   clear-code
+:   .
 
 
 
